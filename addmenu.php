@@ -30,17 +30,10 @@
 					<li class="nav-item active">
 						<a class="nav-link fa fa-home" href="index.php">Home <span class="sr-only">(current)</span></a>
 					</li>
-						<li class="nav-item active">
-							<a class="nav-link fa fa-eye" href="menuview.php">Menu View<span class="sr-only">(current)</span></a>
-						</li> 
-							<li class="nav-item active">
-						<a class="nav-link fa fa-eye" href="addmenu.php">Add Menu<span class="sr-only">(current)</span></a>
-					</li>   
+						
+							
 			</ul>
-			<form class="form-inline">
-				&nbsp;&nbsp;&nbsp;&nbsp;
-					<div class="desc"><b id="logout"><a href="logout.php">Log Out</a></b></div>
-			</form>
+			
 	</div>
 </nav>
 </form>
@@ -94,11 +87,13 @@
 							<select input type="text" name="unit" class="form-control" placeholder="unit" required  >
 								<option placeholder=""><?php echo $unit; ?></option>
 									<option placeholder=""> kg</option>
-									<option placeholder=""> </option>
-										<option placeholder=""> kl</option>
+									<option placeholder=""> dozen</option>
+										<option placeholder=""> pcs.</option>
 									<option placeholder=""> serve</option>
 								<option placeholder=""> pack</option>
-								
+								<option placeholder=""> grms</option>
+								<option placeholder=""> tray</option>
+								<option placeholder=""> pc.</option>
 							</select>		
 						</div>
 					</div>

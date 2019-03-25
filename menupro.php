@@ -26,7 +26,8 @@ if (isset($_POST['submit'])) {
 	
 	if (isset($_GET['delete'])) {
 		$menu_id = $_GET['delete'];
-		$mysqli->query("DELETE FROM menu WHERE menu_id=$menu_id") or die($mysqli->error());
+		$sql = "DELETE FROM menu WHERE menu_id='".$menu_id."'";
+		$mysqli->query($sql) or die($mysqli->error());
 		header("location: menuview.php");
 	
 	}
@@ -34,7 +35,8 @@ if (isset($_POST['submit'])) {
 	if (isset($_GET['edit'])) {
 		$menu_id = $_GET['edit'];
 		$update = true;
-		$result = $mysqli->query("SELECT * FROM menu WHERE menu_id=$menu_id") or die($mysqli->error());
+		$sql = "SELECT * FROM menu WHERE menu_id='".$menu_id."'";
+		$result = $mysqli->query($sql) or die($mysqli->error());
 		if (@count($result)==1) {
 			$row = $result->fetch_array();
 			$menu_id = $row['menu_id'];
@@ -52,7 +54,7 @@ if (isset($_POST['submit'])) {
 		$unit = $_POST['unit'];
 		
 		
-		$mysqli->query("UPDATE menu SET menu_id='$menu_id', menu_name='$menu_name', description='$description', price='$price', unit='$unit' WHERE menu_id=$menu_id") or die($mysqli->error);
+		$mysqli->query("UPDATE menu SET menu_id='$menu_id', menu_name='$menu_name', description='$description', price='$price', unit='$unit' WHERE menu_id='".$menu_id."'") or die($mysqli->error);
 		header("location: menuview.php");
 	}
 

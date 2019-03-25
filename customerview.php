@@ -72,7 +72,7 @@
   <section class="jumbotron">
     <div class="container">
       <center>
-				<font color="black"><h4><b> View Customer</b></h4></font>
+				<font color="success"><h4><b> View Customer</b></h4></font>
 				<br>
 	<table class="table table-dark">
 		<thead>

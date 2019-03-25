@@ -55,10 +55,7 @@
         <a class="nav-link fa fa-plus" href="addmenu.php">Add Menu <span class="sr-only">(current)</span></a>
       </li>
     </ul>
-			<form class="form-inline">
-				&nbsp;&nbsp;&nbsp;&nbsp;
-					<div class="desc"><b id="logout"><a href="logout.php">Log Out</a></b></div>
-			</form>
+			
 		
 	
 	
@@ -72,7 +69,7 @@
       <section class="jumbotron">
     <div class="container">
       <center>
-					<font color="black"><h4><b> View Menu</b></h4></font>
+					<font color="success"><h4><b> View Menu</b></h4></font>
 					<br>
 			
 	<table class="table table-dark">

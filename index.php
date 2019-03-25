@@ -40,6 +40,9 @@
         <a class="nav-link fa fa-eye" href="menuview.php">Menu <span class="sr-only">(current)</span></a>
       </li> 
 	  <li class="nav-item active">
+        <a class="nav-link fa fa-eye" href="orderviewcus.php">Order <span class="sr-only">(current)</span></a>
+      </li> 
+	  <li class="nav-item active">
         <a class="nav-link fa fa-eye" href="view.php">Reports<span class="sr-only">(current)</span></a>
       </li> 
 
@@ -66,7 +69,7 @@
       <img class="d-block w-100" src="images/cover.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="images/f5.jpg" alt="Second slide">
+      <img class="d-block w-100" src="images/cover.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="images/L1.jpg" alt="Third slide">
