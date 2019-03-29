@@ -144,14 +144,22 @@
 					</thead>
 					<?php
 							$con = new mysqli("localhost", "root", "", "onlinekusina");
+<<<<<<< HEAD
 							$sql = "SELECT * FROM order_item ";
+=======
+							$sql = "SELECT * FROM order_item,menu where order_item.menu_id= menu.menu_id ";
+>>>>>>> oderadd/Orderviewcus
 							$queryorderitem = mysqli_query($con,$sql);
 					?>
 					
 				<?php while($row = mysqli_fetch_array($queryorderitem)):?>
 				<?php
 						$x=$row['order_id'];
+<<<<<<< HEAD
 						$y=$row['menu_id'];
+=======
+						$y=$row['menu_name'];
+>>>>>>> oderadd/Orderviewcus
 						$j=$row['price'];
 						$k=$row['quantity'];
 						$m= $j*$k;
@@ -172,8 +180,13 @@
 						option
 					  </button>
 						<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+<<<<<<< HEAD
 					<a class="dropdown-item" href="menupro.php?delete=<?php echo $row["menu_id"]; ?>" onclick="return confirm('are you sure you want to delete?')">Delete</a>
 				<a class="dropdown-item" href="addmenu.php?edit=<?php echo $row["menu_id"]; ?>" onclick="return confirm('are you sure you want to edit?')">Edit</a>
+=======
+					<a class="dropdown-item" href="OrderCuspro.php?deleteitem=<?php echo $row["hidden_id"]; ?>" onclick="return confirm('are you sure you want to delete?')">Delete</a>
+				<a class="dropdown-item" href="orderadd.php?edit_orderitem=<?php echo $row["hidden_id"]; ?>" onclick="return confirm('are you sure you want to edit?')">Edit</a>
+>>>>>>> oderadd/Orderviewcus
 			</div>
 			</div>
 	  </td>

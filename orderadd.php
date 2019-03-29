@@ -55,6 +55,10 @@
 				<?php require_once 'OrderCuspro.php'; ?>
 				
 					<form action="OrderCuspro.php" style="width:700px " method="POST">
+<<<<<<< HEAD
+=======
+					<input type="hidden" name="hidden_id" value="<?php echo $hidden_id; ?>
+>>>>>>> oderadd/Orderviewcus
 					<center>
 					<div class="row">
 						<div class="col-md-6 mb-3">
@@ -98,7 +102,11 @@
 								<?php 
 								   if ($update == true):
 								?>
+<<<<<<< HEAD
 									<input class="btn btn-info" type="submit" name="update" value="update" >
+=======
+									<input class="btn btn-info" type="submit" name="update_orderitem" value="update" >
+>>>>>>> oderadd/Orderviewcus
 								<?php else: ?>
 									<input class="btn btn-info" type="submit" name="add" value="save" >
 								<?php endif ;?>

@@ -60,8 +60,38 @@ $mysqli = new mysqli('localhost', 'root', '', 'onlinekusina') or die(mysqli($mys
 		$mysqli->query("INSERT INTO order_item(order_id, menu_id, price, quantity) VALUES('$order_id', '$menu_id', '$price', '$quantity')") or die($mysqli->error);
 		header("location: orderviewcus.php");
 	}
+<<<<<<< HEAD
 	
 
+=======
+	if (isset($_GET['deleteitem'])) {
+		$hidden_id = $_GET['deleteitem'];
+		$mysqli->query("DELETE FROM order_item WHERE hidden_id=$hidden_id") or die($mysqli->error());
+		header("location: orderviewcus.php");
+	}
+
+	if (isset($_GET['edit_orderitem'])) {
+		$hidden_id = $_GET['edit_orderitem'];
+		$update = true;
+		$sql = "SELECT * FROM order_item WHERE hidden_id='".$hidden_id."'";
+		$result = $mysqli->query($sql) or die($mysqli->error());
+		if (@count($result)==1) {
+			$row = $result->fetch_array();
+			$menu_id = $row['menu_id'];
+			$price = $row['price'];
+			$quantity = $row['quantity'];
+			
+		}
+	}
+	if (isset($_POST['update_orderitem'])) {
+		$hidden_id = $_POST['hidden_id'];
+		$menu_id = $_POST['menu_id'];
+		$price = $_POST['price'];
+		$quantity = $_POST['quantity'];
+		$mysqli->query("UPDATE order_item SET hidden_id='$hidden_id', menu_id='$menu_id', price='$price', quantity='$quantity' WHERE hidden_id='".$hidden_id."'") or die($mysqli->error);
+		header("location: orderviewcus.php");
+	}
+>>>>>>> oderadd/Orderviewcus
 	
 	
 	?>
